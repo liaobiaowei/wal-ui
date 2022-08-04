@@ -1,0 +1,14 @@
+{
+  "name": "wal-ui",
+  "version": "2.0.3",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build & esno build/buildLess"
+  },
+  "files": ["es", "lib"],
+  "keywords": ["wal-ui", "vue3组件库"],
+  "author": "伟",
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts"
+}

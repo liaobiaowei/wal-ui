@@ -1,0 +1,20 @@
+{
+  "name": "wal-ui",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "wal-ui",
+    "vue3组件库"
+  ],
+  "author": "伟",
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts"
+}

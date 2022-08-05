@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "wal-ui": "^1.0.0"
+    "walma-ui": "^1.0.0"
   }
 }

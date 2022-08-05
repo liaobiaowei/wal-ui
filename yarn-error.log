@@ -14,11 +14,11 @@ Platform:
   win32 x64
 
 Trace:
-  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Administrator\AppData\Local\Yarn\Cache\v6\npm-ms-2.1.2-d09d1f357b443f493382a8eb3ccd183872ae6009-integrity\node_modules\ms\license.md' -> 'C:\work\pnpm\walui\node_modules\vite-plugin-dts\node_modules\ms\license.md'
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Administrator\AppData\Local\Yarn\Cache\v6\npm-ms-2.1.2-d09d1f357b443f493382a8eb3ccd183872ae6009-integrity\node_modules\ms\license.md' -> 'C:\work\pnpm\walmaui\node_modules\vite-plugin-dts\node_modules\ms\license.md'
 
 npm manifest:
   {
-    "name": "walui",
+    "name": "walmaui",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",

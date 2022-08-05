@@ -12,7 +12,7 @@ button组件几乎是每个组件库都有的；其实实现一个button组件�
 
 我们的type可以传入的值可以是primary, success, info，warning, danger分别展示不同按钮颜色,type传入text显示文字按钮(没有边框和背景色的按钮)
 
-这里只展示了一个primary的样式，因为其它值的样式实现是一样的。需要的话可以到[button组件样式](https://gitee.com/geeksdidi/walui/blob/master/packages/components/src/button/style/index.less)进行查看。
+这里只展示了一个primary的样式，因为其它值的样式实现是一样的。需要的话可以到[button组件样式](https://gitee.com/geeksdidi/walmaui/blob/master/packages/components/src/button/style/index.less)进行查看。
 
 所以在button/types.ts文件中我们定义一下type的类型：
 
@@ -380,7 +380,7 @@ const styleClass = computed(() => {
     </div>
 </template>
 <script lang="ts" setup>
-import { Button } from 'wal-ui'
+import { Button } from 'walma-ui'
 </script>
 <style lang="less">
 .k-button {
@@ -492,7 +492,7 @@ export default defineComponent({
     </div>
 </template>
 <script lang="ts" setup>
-import { Button } from 'wal-ui'
+import { Button } from 'walma-ui'
 
 </script>
 <style lang="less">

@@ -8,10 +8,10 @@
 import { createApp } from 'vue'
 
 import App from './app.vue'
-//import 'wal-ui/es/style.css';
+//import 'walma-ui/es/style.css';
 const app = createApp(App)
 
-import walui from 'wal-ui'
-app.use(walui)
+import walmaui from 'walma-ui'
+app.use(walmaui)
 
 app.mount('#app')

@@ -59,7 +59,7 @@
 <script lang="ts" setup>
 
 import { inject ,onMounted} from 'vue';
-import { message } from 'wal-ui'
+import { message } from 'walma-ui'
 const columns = [
   {
     dataIndex: 'name',

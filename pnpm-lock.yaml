@@ -49,9 +49,9 @@ importers:
 
   examples:
     specifiers:
-      wal-ui: ^1.0.0
+      walma-ui: ^1.0.0
     dependencies:
-      wal-ui: link:../packages/components
+      walma-ui: link:../packages/components
 
   packages/components:
     specifiers: {}

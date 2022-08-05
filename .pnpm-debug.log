@@ -2,7 +2,7 @@
   "0 debug pnpm:scope": {
     "selected": 4,
     "total": 4,
-    "workspacePrefix": "D:\\wal-ui"
+    "workspacePrefix": "D:\\walma-ui"
   },
   "1 debug pnpm:package-manifest": {
     "initial": {
@@ -17,14 +17,14 @@
       "author": "",
       "license": "ISC",
       "dependencies": {
-        "wal-ui": "workspace:^1.0.12"
+        "walma-ui": "workspace:^1.0.12"
       }
     },
-    "prefix": "D:\\wal-ui\\examples"
+    "prefix": "D:\\walma-ui\\examples"
   },
   "2 debug pnpm:package-manifest": {
     "initial": {
-      "name": "wal-ui",
+      "name": "walma-ui",
       "version": "1.0.1",
       "main": "lib/index.js",
       "module": "es/index.js",
@@ -36,7 +36,7 @@
         "lib"
       ],
       "keywords": [
-        "wal-ui",
+        "walma-ui",
         "vue3组件库"
       ],
       "author": "伟",
@@ -44,11 +44,11 @@
       "description": "",
       "typings": "lib/index.d.ts"
     },
-    "prefix": "D:\\wal-ui\\packages\\components"
+    "prefix": "D:\\walma-ui\\packages\\components"
   },
   "3 debug pnpm:package-manifest": {
     "initial": {
-      "name": "@wal-ui/utils",
+      "name": "@walma-ui/utils",
       "version": "1.0.9",
       "description": "",
       "main": "index.ts",
@@ -59,11 +59,11 @@
       "author": "",
       "license": "MIT"
     },
-    "prefix": "D:\\wal-ui\\packages\\utils"
+    "prefix": "D:\\walma-ui\\packages\\utils"
   },
   "4 debug pnpm:package-manifest": {
     "initial": {
-      "name": "walui",
+      "name": "walmaui",
       "version": "1.0.0",
       "description": "",
       "main": "index.js",
@@ -84,15 +84,15 @@
         "vue": "^3.2.36"
       }
     },
-    "prefix": "D:\\wal-ui"
+    "prefix": "D:\\walma-ui"
   },
   "5 debug pnpm:context": {
     "currentLockfileExists": false,
     "storeDir": "D:\\.pnpm-store\\v3",
-    "virtualStoreDir": "D:\\wal-ui\\node_modules\\.pnpm"
+    "virtualStoreDir": "D:\\walma-ui\\node_modules\\.pnpm"
   },
   "6 debug pnpm:stage": {
-    "prefix": "D:\\wal-ui",
+    "prefix": "D:\\walma-ui",
     "stage": "resolution_started"
   },
   "7 debug pnpm:_dependency_resolved": {
@@ -164,9 +164,9 @@
     "pkgsStack": [],
     "err": {
       "name": "pnpm",
-      "message": "In examples: No matching version found for wal-ui@^1.0.12 inside the workspace",
+      "message": "In examples: No matching version found for walma-ui@^1.0.12 inside the workspace",
       "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
-      "stack": "pnpm: In examples: No matching version found for wal-ui@^1.0.12 inside the workspace\n    at tryResolveFromWorkspace (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:85745:15)\n    at resolveNpm (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:85637:39)\n    at Object.resolve (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:85867:34)\n    at ctx.requestsQueue.add.priority (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:93031:75)\n    at run (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92792:90)\n    at PQueue._tryToStartAnother (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92746:13)\n    at C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92805:16\n    at new Promise (<anonymous>)\n    at PQueue.add (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92787:16)\n    at resolveAndFetch (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:93031:55)"
+      "stack": "pnpm: In examples: No matching version found for walma-ui@^1.0.12 inside the workspace\n    at tryResolveFromWorkspace (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:85745:15)\n    at resolveNpm (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:85637:39)\n    at Object.resolve (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:85867:34)\n    at ctx.requestsQueue.add.priority (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:93031:75)\n    at run (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92792:90)\n    at PQueue._tryToStartAnother (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92746:13)\n    at C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92805:16\n    at new Promise (<anonymous>)\n    at PQueue.add (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92787:16)\n    at resolveAndFetch (C:\\Users\\didi\\AppData\\Roaming\\nvm\\v16.15.1\\node_modules\\pnpm\\dist\\pnpm.cjs:93031:55)"
     }
   }
 }

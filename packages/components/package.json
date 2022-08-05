@@ -1,5 +1,5 @@
 {
-  "name": "wal-ui",
+  "name": "walma-ui",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -10,7 +10,7 @@
     "lib"
   ],
   "keywords": [
-    "wal-ui",
+    "walma-ui",
     "vue3组件库"
   ],
   "author": "伟",

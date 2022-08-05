@@ -1,10 +1,10 @@
 {
-  "name": "wal-ui",
+  "name": "walma-ui",
   "version": "2.1.1",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": ["es", "lib"],
-  "keywords": ["wal-ui", "vue3组件库"],
+  "keywords": ["walma-ui", "vue3组件库"],
   "author": "伟",
   "license": "MIT",
   "description": "",

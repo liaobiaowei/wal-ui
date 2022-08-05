@@ -14,7 +14,7 @@
 作为一个前端拥有一个属于自己的UI组件库是一件非常酷的事情。它不仅能让我们对组件的原理有更深的理解，还能在找工作的时候为自己增色不少。试问有哪个前端不想拥有一套属于自己的UI组件库呢？
 
 
-本文将使用Vue3和TypeScript来编写一个组件库，使用Vite+Vue3来对这个组件库中的组件进行调试，最后使用vite来对组件库进行打包并且发布到npm上。最终的产物是一个名为wal-ui的组件库。
+本文将使用Vue3和TypeScript来编写一个组件库，使用Vite+Vue3来对这个组件库中的组件进行调试，最后使用vite来对组件库进行打包并且发布到npm上。最终的产物是一个名为walma-ui的组件库。
 
 话不多说~ 接下来让我们开始搭建属于我们自己的UI组件库吧
 
@@ -250,11 +250,11 @@ vite启动默认端口为3000；在浏览器中打开localhost:3000 就会看我
 
 一般packages要有utils包来存放我们公共方法，工具函数等
 
-既然它是一个包，所以我们新建utils目录后就需要初始化它，让它变成一个包；终端进入utils文件夹执行：pnpm init 然后会生成一个package.json文件；这里需要改一下包名，我这里将name改成@wal-ui/utils表示这个utils包是属于wal-ui这个组织下的。所以记住发布之前要登录npm新建一个组织；例如wal-ui
+既然它是一个包，所以我们新建utils目录后就需要初始化它，让它变成一个包；终端进入utils文件夹执行：pnpm init 然后会生成一个package.json文件；这里需要改一下包名，我这里将name改成@walma-ui/utils表示这个utils包是属于walma-ui这个组织下的。所以记住发布之前要登录npm新建一个组织；例如walma-ui
 
 ```
 {
-  "name": "@wal-ui/utils",
+  "name": "@walma-ui/utils",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -276,7 +276,7 @@ export const testfun = (a:number,b:number):number=>{
 }
 ```
 
-* 组件库包(这里命名为wal-ui)
+* 组件库包(这里命名为walma-ui)
 
 components是我们用来存放各种UI组件的包
 
@@ -284,7 +284,7 @@ components是我们用来存放各种UI组件的包
 
 ```
 {
-  "name": "wal-ui",
+  "name": "walma-ui",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -301,7 +301,7 @@ components是我们用来存放各种UI组件的包
 新建index.ts入口文件并引入utils包
 
 ```
-import {testfun} from '@wal-ui/utils'
+import {testfun} from '@walma-ui/utils'
 
 const result = testfun (1,1)
 
@@ -323,14 +323,14 @@ npm i esno -g
 进入components文件夹执行
 
 ```
-pnpm install @wal-ui/utils
+pnpm install @walma-ui/utils
 ```
 
 你会发现pnpm会自动创建个软链接直接指向我们的utils包；此时components下的packages：
 
 ```
 {
-  "name": "wal-ui",
+  "name": "walma-ui",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
@@ -341,13 +341,13 @@ pnpm install @wal-ui/utils
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wal-ui/utils": "workspace:^1.0.1"
+    "@walma-ui/utils": "workspace:^1.0.1"
   }
 }
 
 ```
 
-你会发现它的依赖@wal-ui/utils对应的版本为：workspace:^1.0.0；因为pnpm是由workspace管理的，所以有一个前缀workspace可以指向utils下的工作空间从而方便本地调试各个包直接的关联引用。
+你会发现它的依赖@walma-ui/utils对应的版本为：workspace:^1.0.0；因为pnpm是由workspace管理的，所以有一个前缀workspace可以指向utils下的工作空间从而方便本地调试各个包直接的关联引用。
 
 到这里基本开发方法我们已经知道啦；接下来就要进入正题了，开发一个button组件
 
@@ -401,12 +401,12 @@ export {
 
 上面已经说过执行在workspace执行 pnpm i xxx的时候pnpm会自动创建个软链接直接指向我们的xxx包。
 
-所以这里我们直接在examples执行：pnpm i wal-ui
+所以这里我们直接在examples执行：pnpm i walma-ui
 
 此时你就会发现packages.json的依赖多了个
 
 ```
-"wal-ui": "workspace:^1.0.0"
+"walma-ui": "workspace:^1.0.0"
 ```
 
 这时候我们就能直接在我们的测试项目下引入我们本地的components组件库了，启动我们的测试项目，来到我们的 **examples/app.vue** 直接引入Button
@@ -418,7 +418,7 @@ export {
     </div>
 </template>
 <script lang="ts" setup>
-import { Button } from 'wal-ui'
+import { Button } from 'walma-ui'
 </script>
 ```
 
@@ -607,7 +607,7 @@ export default defineConfig(
 
 ```
 {
-  "name": "wal-ui",
+  "name": "walma-ui",
   "version": "1.0.0",
   "main": "lib/index.js",
   "module":"es/index.js",
@@ -619,7 +619,7 @@ export default defineConfig(
     "lib"
   ],
   "keywords": [
-    "wal-ui",
+    "walma-ui",
     "vue3组件库"
   ],
   "author": "伟",
@@ -642,9 +642,9 @@ files是指我们1需要发布到npm上的目录，因为不可能components下�
 
 ## 开始发布
 
-做了那么多终于到发布的阶段了；其实npm发包是很容易的，就拿我们的组件库wal-ui举例吧
+做了那么多终于到发布的阶段了；其实npm发包是很容易的，就拿我们的组件库walma-ui举例吧
 
-发布之前记得到[npm](https://www.npmjs.com/)官网注册个账户,如果你要发布@xx/xx这种包的话需要在npm新建个组织组织组织名就是@后面的，比如我建的组织就是wal-ui,注册完之后你就可以发布了
+发布之前记得到[npm](https://www.npmjs.com/)官网注册个账户,如果你要发布@xx/xx这种包的话需要在npm新建个组织组织组织名就是@后面的，比如我建的组织就是walma-ui,注册完之后你就可以发布了
 
 
 首先要将我们代码提交到git仓库，不然pnpm发布无法通过，后面每次发版记得在对应包下执行 **pnpm version patch**你就会发现这个包的版本号patch(版本号第三个数) +1 了，同样的 **pnpm version major** major和 **pnpm version minor** 分别对应版本号的第一和第二位增加。
@@ -667,7 +667,7 @@ pnpm publish --access public
 引入我们打包后的组件你会发现没有样式，所以你需要在全局引入我们的style.css才行；如 main.ts中需要
 
 ```
-import 'wal-ui/es/style.css';
+import 'walma-ui/es/style.css';
 ```
 
 很显然这种组件库并不是我们想要的，我们需要的组件库是每个css样式放在每个组件其对应目录下，这样就不需要每次都全量导入我们的css样式。
@@ -925,7 +925,7 @@ export default defineConfig(
 
 ## 直接使用
 
-如果你不想一步步的搭建，想直接使用现成的话，你可以直接把项目clone下来-> [walui](https://gitee.com/geeksdidi/walui),然后你只需要以下几步便可将其完成
+如果你不想一步步的搭建，想直接使用现成的话，你可以直接把项目clone下来-> [walmaui](https://gitee.com/geeksdidi/walmaui),然后你只需要以下几步便可将其完成
 
 * 安装pnpm
 npm i pnpm -g
@@ -944,7 +944,7 @@ pnpm run build
 
 由于作者水平有限，难免会存在一些错误或不妥之处，希望各位能够不吝指出，一定及时修改。如果你对这个项目有更好的想法或者建议也欢迎在评论区提出，不胜感激。
 
-后续我会对一些常用组件进行开发，每个组件的开发都会以文章的形式展现出来以供大家参考。也欢迎大家将项目fork下来，提交自己组件或者对walui的修改到[walui](https://gitee.com/geeksdidi/walui)~
+后续我会对一些常用组件进行开发，每个组件的开发都会以文章的形式展现出来以供大家参考。也欢迎大家将项目fork下来，提交自己组件或者对walmaui的修改到[walmaui](https://gitee.com/geeksdidi/walmaui)~
 
 创作不易，你的点赞就是我的动力！如果感觉对自己有帮助的话就请点个赞吧，感谢~
 
